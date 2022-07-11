@@ -11,15 +11,16 @@ s=Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=s)
 driver.maximize_window()
 driver.get(url)
-
 sign_in1 = driver.find_element(By.XPATH,"/html/body/div[1]/header/nav/div/a[2]")
 sign_in1.click()
+time.sleep(3)
+
 email_input=driver.find_element(By.NAME, "session_key")
 password_input=driver.find_element(By.NAME, "session_password")
 sign_in2 = driver.find_element(By.CSS_SELECTOR,"#organic-div > form > div.login__form_action_container > button")
 email_input.send_keys(linkedin_email)
 password_input.send_keys(linkedin_password)
-time.sleep(2)
+time.sleep(3)
 sign_in2.click()
 
 
