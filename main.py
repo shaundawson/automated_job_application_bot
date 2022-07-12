@@ -57,10 +57,8 @@ for listing in all_listings:
             print("Complex application, skipped.")
             continue
         else:
-            # submit_button.click()
+            submit_button.click()
             print("Submitted the application")
-            save_button = driver.find_element(By.XPATH,"/html/body/div[3]/div[2]/div/div[3]/button[2]")
-            save_button.click()
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             
         #Once application completed, close the pop-up window.
